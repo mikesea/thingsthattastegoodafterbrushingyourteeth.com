@@ -12,20 +12,10 @@
   </head>
   <body>
 
-  <% if Time.now.to_i % 2 == 0 %>
     <div class="thing">
-      <h1>Oreos</h1>
-      <img src="http://upload.wikimedia.org/wikipedia/commons/2/21/Oreo.jpg" width="100">
+      <h1><%= @thing[:name] %></h1>
+      <img src="<%= @thing[:url] %>" width="100">
     </div>
-
-  <% else %>
-
-    <div class="not-thing">
-      <h1>Not Orange Juice</h1>
-      <img src="http://insideintercom.io/wp-content/uploads/2012/09/OrangeJuiceTest-740.jpg" width="100">
-    </div>
-
-  <% end %>
 
   </body>
 </html>
