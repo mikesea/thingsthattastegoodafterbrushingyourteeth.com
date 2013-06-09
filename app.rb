@@ -20,7 +20,7 @@ end
 
 get '/' do
   @thing = DB['SELECT * FROM things ORDER BY random() LIMIT 1'].first
-  erb :index
+  erb :show
 end
 
 get '/things/new' do
@@ -34,3 +34,8 @@ post '/things' do
   redirect '/'
 end
 
+get '/things' do
+  protected!
+  @things = DB[:things].all
+  erb :index
+end
