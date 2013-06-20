@@ -2,8 +2,17 @@ require 'rubygems'
 require 'bundler/setup'
 require 'sinatra'
 require 'sequel'
+require 'yaml'
 
-DB = Sequel.connect(ENV['DATABASE_URL'])
+if ENV['DATABASE_URL']
+  db_config = ENV['DATABASE_URL']
+else
+  dir = File.dirname(__FILE__)
+  db_config = YAML.load_file(File.join(dir,'config','database.yml'))[ENV["RACK_ENV"]]
+end
+DB = Sequel.connect(db_config)
+
+require_relative 'models/thing'
 
 helpers do
   def protected!
