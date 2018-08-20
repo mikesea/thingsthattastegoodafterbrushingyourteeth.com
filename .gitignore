@@ -1,2 +1,9 @@
-.rbenv-vars
-.DS_Store
+npm-debug.log*
+/build
+.vscode
+.sass-cache
+node_modules/
+yarn-error.log
+.s3cfg
+.jshintrc
+yarn.lock
