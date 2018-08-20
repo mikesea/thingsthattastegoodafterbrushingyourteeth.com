@@ -1,4 +1,0 @@
-development:
-  adapter: postgres
-  host: localhost
-  database: things_development
