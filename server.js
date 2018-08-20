@@ -1,3 +1,4 @@
+require('noodle-it')
 const express = require('express')
 
 const thingsList = require('./things.json')
