@@ -1,4 +1,4 @@
 thingsthattastegoodafterbrushingyourteeth.com
 =============================================
 
-What to eat when you've got clean teeth!!!
+What to eat when you've got clean teeth!
